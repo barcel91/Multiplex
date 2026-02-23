@@ -130,7 +130,7 @@ public class Screening {
 //        System.out.println("Film: " + movie.getTitle());
 //        System.out.println("Data: " + date);
 //        System.out.println("Sala: " + hall.getNumber());
-//        System.out.println("Gatunek: " + type);
+//        System.out.println("Rodzaj: " + type);
 //    }
 
     @Override
