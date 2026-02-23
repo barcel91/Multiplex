@@ -1,5 +1,3 @@
-package main.java;
-
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -46,19 +44,19 @@ public class Screening {
             Seat seat = hall.findSeat(code);
 
             if (seat == null) {
-                System.out.println("Seat " + code + " does not exist.");
+                System.out.println("Siedznie " + code + " nie istnieje.");
                 continue;
             }
 
             if (tickets.containsKey(seat)) {
-                System.out.println("Seat " + code + " is already taken.");
+                System.out.println("Siedzenie " + code + " jest już zajęte.");
                 continue;
             }
 
             Ticket ticket = new Ticket(seat, this, null);
             tickets.put(seat, ticket);
 
-            System.out.println("Seat " + code + " reserved.");
+            System.out.println("siedzenie " + code + " zarezerwowane.");
         }
     }
 
@@ -71,12 +69,12 @@ public class Screening {
             Seat seat = hall.findSeat(code);
 
             if (seat == null) {
-                System.out.println("Seat " + code + " does not exist.");
+                System.out.println("Siedzenie " + code + " nie istnieje.");
                 continue;
             }
 
             if (tickets.containsKey(seat)) {
-                System.out.println("Seat " + code + " is already taken.");
+                System.out.println("Siedzenie " + code + " jest już zajęte.");
                 continue;
             }
 
@@ -85,7 +83,7 @@ public class Screening {
 
             customer.addTicket(ticket);
 
-            System.out.println("Seat " + code + " reserved for " + customer.getName());
+            System.out.println("Siedznie " + code + " zarezerwowane dla  " + customer.getName());
         }
     }
 
@@ -96,19 +94,19 @@ public class Screening {
         Seat seat = hall.findSeat(seatCode);
 
         if (seat == null) {
-            System.out.println("Seat does not exist.");
+            System.out.println("Siedzenie nie istnieje.");
             return;
         }
 
         Ticket ticket = tickets.get(seat);
 
         if (ticket == null) {
-            System.out.println("Seat must be reserved first.");
+            System.out.println("Siedzenie musi zostać najpierw zarezerwowane.");
             return;
         }
 
         ticket.purchase();
-        System.out.println("Ticket for seat " + seatCode + " purchased.");
+        System.out.println("Zakupiono bilet dla siedzenia nr: " + seatCode);
     }
 
     // --- DOSTĘPNE MIEJSCA ---
@@ -128,15 +126,15 @@ public class Screening {
 
     // --- INFO ---
 
-    public void printInfo() {
-        System.out.println("Movie: " + movie.getTitle());
-        System.out.println("Date: " + date);
-        System.out.println("Hall: " + hall.getNumber());
-        System.out.println("Type: " + type);
-    }
+//    public void printInfo() {
+//        System.out.println("Film: " + movie.getTitle());
+//        System.out.println("Data: " + date);
+//        System.out.println("Sala: " + hall.getNumber());
+//        System.out.println("Gatunek: " + type);
+//    }
 
     @Override
     public String toString() {
-        return movie.getTitle() + " | " + date + " | Hall " + hall.getNumber() + " | " + type;
+        return movie.getTitle() + " | " + date + " | Sala " + hall.getNumber() + " | " + type;
     }
 }

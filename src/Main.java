@@ -1,5 +1,3 @@
-package main.java;
-
 import java.time.LocalDateTime;
 
 public class Main {
@@ -9,8 +7,8 @@ public class Main {
         // --- SYSTEM ---
         MultiplexSystem system = new MultiplexSystem();
 
-        Cinema cinema1 = new Cinema("Super Tarasy", "ul. Akademicka 5");
-        Cinema cinema2 = new Cinema("Galaxy Cinema", "ul. Marszałkowska 10");
+        Cinema cinema1 = new Cinema("Kino pierwsze", "ul. Wolności 5");
+        Cinema cinema2 = new Cinema("Kino drugie", "ul. Jana III Sobieskiego 10");
 
         system.addCinema(cinema1);
         system.addCinema(cinema2);
@@ -23,8 +21,8 @@ public class Main {
         cinema1.addHall(hall2);
 
         // --- FILMY ---
-        Movie movie1 = new Movie("James Bond", 120);
-        Movie movie2 = new Movie("Interstellar", 169);
+        Movie movie1 = new Movie("Hobbit", 120);
+        Movie movie2 = new Movie("Harry Potter", 169);
 
         // --- SEANSE ---
         Screening screening1 = new Screening(
@@ -56,7 +54,7 @@ public class Main {
         System.out.println();
 
         // --- KLIENT ---
-        Customer customer = new Customer("Jan Kowalski", "jan@email.com");
+        Customer customer = new Customer("Łukasz Kowalski", "luko@email.com");
 
         // --- REZERWACJA DLA KLIENTA ---
         screening1.reservePlaces(customer, "B5", "B6");
@@ -71,9 +69,11 @@ public class Main {
         System.out.println();
 
         // --- DOSTĘPNE MIEJSCA ---
-        System.out.println("Available seats:");
+        System.out.println("Dostępne siedzenia:");
         for (Seat seat : screening1.getAvailableSeats()) {
             System.out.print(seat + " ");
         }
+
     }
+
 }

@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +37,7 @@ public class MultiplexSystem {
     // --- WYŚWIETLANIE ---
 
     public void printCinemas() {
-        System.out.println("Cinemas in system:");
+        System.out.println("Kina w systemie:");
         for (Cinema cinema : cinemas) {
             System.out.println(cinema);
         }

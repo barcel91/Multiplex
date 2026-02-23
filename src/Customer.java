@@ -1,5 +1,3 @@
-package main.java;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,11 +35,11 @@ import java.util.List;
 
         public void printTickets() {
             if (tickets.isEmpty()) {
-                System.out.println("No tickets found.");
+                System.out.println("Nie znaleziono biletów.");
                 return;
             }
 
-            System.out.println("Tickets for " + name + ":");
+            System.out.println("bilety dla " + name + ":");
             for (Ticket ticket : tickets) {
                 System.out.println(ticket);
             }
@@ -49,7 +47,6 @@ import java.util.List;
 
         @Override
         public String toString() {
-            return "Customer{name='" + name + "', email='" + email + "'}";
+            return "Klient{imię='" + name + "', email='" + email + "'}";
         }
     }
-}

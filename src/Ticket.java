@@ -1,8 +1,4 @@
-package main.java;
-
 public class Ticket {
-
-    public class Ticket {
 
         private Seat seat;
         private Screening screening;
@@ -44,7 +40,7 @@ public class Ticket {
 
         public void purchase() {
             if (!reserved) {
-                System.out.println("Ticket must be reserved first.");
+                System.out.println("Bilet musi być najpierw zarezerwowany.");
                 return;
             }
 
@@ -54,12 +50,11 @@ public class Ticket {
 
         @Override
         public String toString() {
-            return "Ticket{" +
-                    "movie=" + screening.getMovie().getTitle() +
-                    ", date=" + screening.getDate() +
-                    ", seat=" + seat +
-                    ", purchased=" + purchased +
+            return "Bilet{" +
+                    "film=" + screening.getMovie().getTitle() +
+                    ", data=" + screening.getDate() +
+                    ", siedzenie=" + seat +
+                    ", zakupiono=" + purchased +
                     '}';
         }
     }
-}

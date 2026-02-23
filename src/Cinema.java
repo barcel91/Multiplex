@@ -1,5 +1,3 @@
-package main.java;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,14 +43,14 @@ public class Cinema {
     // --- REPERTUAR ---
 
     public void printProgramme() {
-        System.out.println("Programme for cinema: " + name);
+        System.out.println("Program dla kina: " + name);
         for (Screening screening : screenings) {
             System.out.println(screening);
         }
     }
 
     public void printProgrammeForNextWeek() {
-        System.out.println("Programme for next 7 days in " + name);
+        System.out.println("Program na następne 7 dni dla kina: " + name);
 
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime nextWeek = now.plusDays(7);

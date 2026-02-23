@@ -1,6 +1,3 @@
-package main.java;
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,6 +52,6 @@ public class Hall {
 
     @Override
     public String toString() {
-        return "Hall " + number;
+        return "Sala " + number;
     }
 }
